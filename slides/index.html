@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Bean There, Done That
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="slides" class="loading">
+      <section class="center">
+        <img src="img/sigbovik.png" width="80%" height="80%" />
+      </section>
+
+      <section class="center">
+        <h2 width="70%" style="font-weight: normal">"SIGBOVIK 2024 is the eighteenth edition of this esteemed conference series, which was formed in 2007 to celebrate the inestimable and variegated work of Harry Quale Bovik. We especially welcome the three neglected quadrants of research: <span data-highlight="1">joke realizations of joke ideas, joke realizations of serious ideas, and serious realizations of joke ideas.</span>"</h2>
+      </section>
+
+      <section>
+        <h2>Last year's SIGBOVIK paper</h2>
+        <div class="column fill center">
+          <img src="img/jalgorithm.png" width="80%" />
+        </div>
+      </section>
+
+      <section class="center">
+        <h1>Bean There, Done That</h1>
+        <p style="margin-top: -1em;"><em>A mathematical model of bean sculptures</em></p>
+      </section>
+
+      <section class="center">
+        <img class="stack" width="70%" src="img/chicago.png" />
+        <img class="stack" width="70%" src="img/river.jpg" data-order="1" />
+        <img class="stack" width="70%" src="img/ferris.webp" data-order="2" />
+        <img class="stack" width="70%" src="img/cloudgate.jpg" data-order="3" />
+      </section>
+
+      <section>
+        <h2>Bean sculptures</h2>
+        <div class="row fill center aligntop">
+          <div class="column fill">
+            <ul>
+              <li>Singlehandedly put Chicago on the map</li>
+              <li data-order="1">Naturally, every city wants one</li>
+              <li data-order="2">NYC got one</li>
+              <li data-order="3">Ottawa had one since the 60s</li>
+            </ul>
+          </div>
+          <div class="column fill">
+            <img class="disappearing" src="img/cloudgate 2.jpg" width="80%" data-disappear="2" />
+            <img class="disappearing" src="img/nycbean.jpg" width="80%" data-order="2" data-disappear="3" />
+            <img class="disappearing" src="img/ottawa-sphere.webp" width="80%" data-order="3" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Research questions</h2>
+        <div class="column fill center">
+          <h3>
+            <ol>
+              <li data-order="1">How do we mathematically describe the space of bean sculptures?</li>
+              <li data-order="2">How do we help every city find their own unique bean?</li>
+            </ol>
+          </h3>
+        </div>
+      </section>
+
+      <section class="center">
+        <h1>Method</h1>
+      </section>
+
+      <section>
+        <h2>Bean Components</h2>
+        <div class="column aligntop fill">
+          <ul>
+            <li>A <strong>quadratic B&eacute;zier curve</strong></li>
+            <li>Each has three control points</li>
+            <li>The middle one is constrained for maximum beaniness</li>
+          </ul>
+          <iframe class="fill" src="sketches/bezier" width="100%"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>Bean Components</h2>
+        <div class="column aligntop">
+          <ul>
+            <li>This is enough for our bean examples:</li>
+          </ul>
+        </div>
+        <div class="row fill">
+          <div class="column center fill">
+            <img src="img/cloudgate 2.jpg" width="60%" />
+          </div>
+          <div class="column center fill">
+            <svg width="60%" viewbox="0 5 20 12">
+              <path d="M 5,12 Q 10,8 15,12" stroke="black" stroke-width="9" fill="none" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+        <div class="row fill">
+          <div class="column center fill">
+            <img src="img/ottawa-sphere.webp" width="60%" />
+          </div>
+          <div class="column center fill">
+            <svg width="60%" viewbox="0 5 20 12">
+              <circle cx="10" cy="10" r="5" stroke="none" fill="black" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="center">
+        <h2>However...</h2>
+      </section>
+
+      <section>
+        <h2>Turning other landmarks into beans</h2>
+        <ul><li>How do we turn these into beans?</li></ul>
+        <div class="row fill">
+          <div class="column center fill">
+            <img class="stack" src="img/Parliament_of_Canada_Building.jpg" width="60%" />
+          </div>
+          <div class="column center fill">
+            <img class="stack" src="img/cn.jpg" width="30%" />
+          </div>
+        </div>
+        <div class="row fill">
+          <div class="column center fill">
+            <img class="stack" src="img/maman.jpg" width="60%" />
+          </div>
+          <div class="column center fill">
+            <img class="stack" src="img/Kheops-Pyramid.jpg" width="60%" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Novel beans</h2>
+        <div class="column aligntop">
+          <ul>
+            <li>We can <strong>combine multiple segments</strong> to make composite beans</li>
+            <li data-order="1">But how do we make sure the result is still smooth?</li>
+            <li data-order="2">We'll use <strong>signed distance functions</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Signed Distance Functions</h2>
+        <div class="column aligntop">
+          <ul>
+            <li>A function \(f: \mathbb{R}^n \mapsto \mathbb{R} \)</li>
+            <li data-order="1">A function that describes, for any point in space, the <strong>distance to the surface of a shape</strong></li>
+            <li data-order="2">Positive means it's outside the shape, negative means it's inside</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Signed Distance Functions</h2>
+        <div class="column aligntop fill">
+          <ul>
+            <li>A circle: for \(f(X) = \vert X \vert - r \)</li>
+          </ul>
+          <iframe class="fill" src="sketches/sdf" width="100%"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>Signed Distance Functions</h2>
+        <div class="column aligntop fill">
+          <ul>
+            <li>Combining two SDFs with a union \(\min(d_1, d_2)\)</li>
+          </ul>
+          <iframe class="fill" src="sketches/sdf?union=true" width="100%"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>Signed Distance Functions</h2>
+        <div class="column aligntop fill">
+          <ul>
+            <li>Combining two SDFs with a <em>smooth</em> union \(d_1 + kg(d_2 - d_1)/k\)</li>
+          </ul>
+          <iframe class="fill" src="sketches/sdf?union=true&smooth=true" width="100%"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>Combining Curves</h2>
+        <div class="column aligntop fill">
+          <ul>
+            <li>Combining two curves instead of circles:</li>
+          </ul>
+          <iframe class="fill" src="sketches/smoothbezier" width="100%"></iframe>
+        </div>
+      </section>
+
+      <section>
+        <h2>In 3D</h2>
+        <div class="column center fill">
+          <video width="60%" controls autoplay muted loop>
+            <source src="img/3d-blob.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section class="center">
+        <h2><em>Automatically</em> replacing landmarks</h2>
+      </section>
+
+      <section>
+        <h2>Markov-Chain Monte Carlo (MCMC) Optimization</h2>
+        <ol>
+          <li>Pick random starting parameters</li>
+          <li data-order="1">Mutate the reference to create a proposal
+            <ul>
+              <li data-order="2">If the proposal is better than the reference, make it the new reference</li>
+              <li data-order="3">If it's worse, randomly still make it the proposal, where this is less likely to happen the farther from the target it is</li>
+            </ul>
+          </li>
+          <li data-order="4">Go back to step 2 <span data-order="5">(until you run out of patience)</span></li>
+          <li data-order="6">Use the best option you've encountered</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>In action</h2>
+        <div class="column center fill">
+          <video width="60%" controls autoplay muted loop>
+            <source src="img/maman-opt.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+
+      <section class="center">
+        <h2>Results</h2>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="lib/MathJax/MathJax.js?config=TeX-AMS_CHTML-full&delayStartupUntil=configured"></script>
+    <script type="text/javascript" src="slides.js"></script>
+    <script type="text/javascript" src="slides/slide.js"></script>
+  </body>
+</html>
