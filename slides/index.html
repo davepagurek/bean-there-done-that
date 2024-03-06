@@ -15,6 +15,21 @@
 
       <section class="center">
         <h2 width="70%" style="font-weight: normal">"SIGBOVIK 2024 is the eighteenth edition of this esteemed conference series, which was formed in 2007 to celebrate the inestimable and variegated work of Harry Quale Bovik. We especially welcome the three neglected quadrants of research: <span data-highlight="1">joke realizations of joke ideas, joke realizations of serious ideas, and serious realizations of joke ideas.</span>"</h2>
+        <table>
+          <tr>
+            <th rowspan="2">&uarr;<br />Realization seriousness</th>
+            <td><span data-order="1">Serious realizations of joke ideas</span></td>
+            <td>Serious realizations of serious ideas</td>
+          </tr>
+          <tr>
+            <td><span data-order="1">Joke realizations of joke ideas</span></td>
+            <td><span data-order="1">Joke realizations of serious ideas</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <th colspan="2">Idea seriousness &rarr;</th>
+          </tr>
+        </table>
       </section>
 
       <section>
@@ -33,7 +48,55 @@
         <img class="stack" width="70%" src="img/chicago.png" />
         <img class="stack" width="70%" src="img/river.jpg" data-order="1" />
         <img class="stack" width="70%" src="img/ferris.webp" data-order="2" />
-        <img class="stack" width="70%" src="img/cloudgate.jpg" data-order="3" />
+        <img class="stack" width="60%" src="img/ira1.jpg" data-order="3" />
+        <img class="stack" width="60%" src="img/ira2.webp" data-order="4" />
+        <img class="stack" width="60%" src="img/ira3.jpg" data-order="5" />
+        <img class="stack" width="70%" src="img/cloudgate.jpg" data-order="6" />
+      </section>
+
+      <section class="center">
+<svg width="80%" viewBox="0 0 1356 657" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="millennium">
+<rect id="Screenshot 2024-03-05 at 7.35 1" width="1356" height="657" fill="url(#pattern0)"/>
+<line id="Line 1" x1="924.5" y1="628" x2="924.5" y2="177" stroke="black"/>
+<text id="Bean construction" fill="black" xml:space="preserve" style="white-space: pre" font-family="sans-serif" font-size="32" letter-spacing="0em"><tspan x="925" y="208.136">Bean construction</tspan></text>
+<text data-order="1" id="Millennium Park opens" fill="black" xml:space="preserve" style="white-space: pre" font-family="sans-serif" font-size="32" letter-spacing="0em"><tspan x="925" y="610.136">Millennium Park opens</tspan></text>
+</g>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1_9" transform="scale(0.000737463 0.00152207)"/>
+</pattern>
+<image id="image0_1_9" data-name="Screenshot 2024-03-05 at 7.35.png" width="1356" height="657" xlink:href="img/ngram.png"/>
+</defs>
+</svg>
+      </section>
+
+      <section class="center">
+        <table>
+          <tr>
+            <td></td>
+            <th>Parliament</th>
+            <th>Cloud Gate</th>
+          </tr>
+          <tr data-order="1">
+            <th>Annual visitors</th>
+            <td>3 million</td>
+            <td>5 million</td>
+          </tr>
+          <tr data-order="2">
+            <th>Construction cost</th>
+            <td>(Restoration alone) $3 billion</td>
+            <td>$23 million</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="center">
+        <h1>\(\frac{5,000,000}{3,000,000}\) <span data-order="1">&gt; 0</span></h1>
+      </section>
+
+      <section class="center">
+        <h1>\(\frac{\$23,000,000}{\$3,000,000,000}\) <span data-order="1">&lt; 0</span></h1>
       </section>
 
       <section>
@@ -213,24 +276,52 @@
       </section>
 
       <section>
-        <h2>Markov-Chain Monte Carlo (MCMC) Optimization</h2>
-        <ol>
-          <li>Pick random starting parameters</li>
-          <li data-order="1">Mutate the reference to create a proposal
-            <ul>
-              <li data-order="2">If the proposal is better than the reference, make it the new reference</li>
-              <li data-order="3">If it's worse, randomly still make it the proposal, where this is less likely to happen the farther from the target it is</li>
-            </ul>
-          </li>
-          <li data-order="4">Go back to step 2 <span data-order="5">(until you run out of patience)</span></li>
-          <li data-order="6">Use the best option you've encountered</li>
-        </ol>
+        <div class="column fill">
+          <h2>Markov-Chain Monte Carlo (MCMC) Optimization</h2>
+          <ol>
+            <li>Pick random starting parameters</li>
+            <li data-order="1">Mutate the reference to create a proposal
+              <ul>
+                <li data-order="2">If the proposal is better than the reference, make it the new reference</li>
+                <li data-order="3">If it's worse, randomly still make it the proposal, where this is less likely to happen the farther from the target it is</li>
+              </ul>
+            </li>
+            <li data-order="4">Go back to step 2 <span data-order="5">(until you run out of patience)</span></li>
+            <li data-order="6">Use the best option you've encountered</li>
+          </ol>
+          <div class="row center fill">
+            <div class="column fill">
+              <img src="./img/target.png" width="70%" />
+            </div>
+            <div class="column fill">
+              <img class="stack" src="./img/candidate.png" width="70%" />
+              <img class="stack" src="./img/candidate2.png" width="70%" data-order="1" />
+              <img class="stack" src="./img/candidate3.png" width="70%" data-order="4" />
+              <img class="stack" src="./img/iters.gif" width="70%" data-order="5" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="column fill">
+          <h2>What does "better" mean?</h2>
+          <ul>
+            <li>Compare the opaque pixels between a bean and a landmark</li>
+            <li data-order="2"><strong>Maximize intersection:</strong> as many black pixels as possible</li>
+            <li data-order="3"><strong>Minimize union:</strong> as few red + cyan pixels as possible</li>
+          </ul>
+          <div class="row center fill">
+            <img class="stack" width="50%" src="./img/parliament-tint.png" style="mix-blend-mode: multiply" />
+            <img class="stack" width="50%" src="./img/bean-tint.png" style="mix-blend-mode: multiply" data-order="1" />
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>In action</h2>
         <div class="column center fill">
-          <video width="60%" controls autoplay muted loop>
+          <video width="50%" controls autoplay muted loop>
             <source src="img/maman-opt.mp4" type="video/mp4" />
           </video>
         </div>
@@ -238,6 +329,40 @@
 
       <section class="center">
         <h2>Results</h2>
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/Parliament_of_Canada_Building.jpg" width="60%" />
+        <img class="stack" src="./img/parliament-bean-replacement.jpg" width="60%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/maman.jpg" width="60%" />
+        <img class="stack" src="./img/maman-bean.jpg" width="60%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/Toronto_-_ON_-_Toronto_Harbourfront7.jpg" width="30%" />
+        <img class="stack" src="./img/cn-bean-waterfront.jpg" width="30%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/david-tourists.jpg" width="60%" />
+        <img class="stack" src="./img/david-tourists-bean.jpg" width="60%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/Kheops-Pyramid.jpg" width="60%" />
+        <img class="stack" src="./img/pyramid-bean.jpg" width="60%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <img class="stack" src="./img/earthrise.jpg" width="40%" />
+        <img class="stack" src="./img/bean-earth.jpg" width="40%" data-order="1" />
+      </section>
+
+      <section class="center">
+        <h2>Thank you</h2>
       </section>
     </div>
 
