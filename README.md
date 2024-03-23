@@ -15,6 +15,8 @@ Chicago's status as a world-class city is cemented by its iconic bean sculpture.
 
 Paper: https://davepagurek.github.io/bean-there-done-that/beans.pdf
 
+Try your own bean: https://davepagurek.github.io/bean-there-done-that/code
+
 Talk: https://www.youtube.com/watch?v=Su300wJxmF4
 
 Slides: https://davepagurek.github.io/bean-there-done-that/slides
